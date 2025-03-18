@@ -190,9 +190,9 @@ function updateTaskList() {
     const taskList = document.getElementById('tasklist');
     taskList.innerHTML = '<p style="margin:0px; float: left; font-weight: bold;">Tasks</p>';
 
-    
+   
     const spacingDiv = document.createElement('div');
-    spacingDiv.style.height = "30px"; 
+    spacingDiv.style.height = "30px";  
     taskList.appendChild(spacingDiv);
 
     state.habits.forEach((habit, index) => {
@@ -206,12 +206,13 @@ function updateTaskList() {
         taskItem.style.cursor = "pointer";
         taskItem.style.textDecoration = habit.completed ? "line-through" : "none";
 
-        
+      
         taskItem.addEventListener('click', () => completeHabit(index));
 
         taskList.appendChild(taskItem);
     });
 }
+
 
 
 
