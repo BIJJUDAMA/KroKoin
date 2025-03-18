@@ -186,10 +186,14 @@ function resetState() {
     updateUI();
 }
 
-// Update the right-hand task menu with active tasks
 function updateTaskList() {
     const taskList = document.getElementById('tasklist');
-    taskList.innerHTML = '<p style="margin:0px; float: left;">Tasks</p>';
+    taskList.innerHTML = '<p style="margin:0px; float: left; font-weight: bold;">Tasks</p>';
+
+    // Add spacing after the "Tasks" heading to push down first task
+    const spacingDiv = document.createElement('div');
+    spacingDiv.style.height = "25px";  // Adds space below "Tasks"
+    taskList.appendChild(spacingDiv);
 
     state.habits.forEach((habit, index) => {
         const taskItem = document.createElement('p');
@@ -208,6 +212,8 @@ function updateTaskList() {
         taskList.appendChild(taskItem);
     });
 }
+
+
 
 // Event listeners
 document.getElementById('add-habit').addEventListener('click', addHabit);

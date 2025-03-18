@@ -91,7 +91,8 @@
 
 .habit-item {
   min-width: 250px;
-  background: white;
+  background: white; /* Ensure background is white */
+  color: black; /* Make text clearly visible */
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -100,6 +101,9 @@
   flex-direction: column;
   align-items: center;
 }
+
+
+
 
 /* Habit Name & Streak - Align in Row */
 .habit-info {
