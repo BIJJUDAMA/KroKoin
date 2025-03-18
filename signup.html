@@ -3,33 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Started!</title>
-    <link rel="stylesheet" href="loginstyle.css">
+    <title>Sign Up - Start Your Journey</title>
+    <link rel="stylesheet" href="signupstyle.css">
 </head>
 <body>
-    
     <div class="home">
         <button class="home-button">Home</button>
     </div>
-    <div class="login-container">
-        <h1>"Small habits, big results.<br> Log in and level up!"</h1>
-        
-        <form>
+    <div class="signup-container">
+        <h1>"Your habits, your future. Start now."</h1>
+        <br>
+        <br>        
+        <form action="login.html">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
             </div>
             
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#" style="color: white;">Terms of Service</a> and <a href="#" style="color: white;">Privacy Policy</a></label>
             </div>
             
-            <button type="submit">Log In</button>
+            <button type="submit">Create Account</button>
             
             <div class="links">
-                <a href="#">Forgot Password?</a>
-                <a href="#">Sign Up</a>
+                <p>Already have an account? <a href="login.html">Log In</a></p>
             </div>
         </form>
     </div>
