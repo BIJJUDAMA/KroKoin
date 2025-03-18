@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KroKoin</title>
+    <link rel="stylesheet" href="stylekr.css">
+</head>
+
+<body>
+    <header>
+        <div id="tit">
+            <h1>KroKoin</h1>
+            <span id="coincounter">
+                <img id="coingif" src="coin.gif" alt="Coin" width="50px" height="50px">
+                <p id="numcoin">0000</p>
+            </span>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>🚀 Habit Streak Tracker</h1>
+        
+        <section class="stats-container">
+            <div class="stat-box">
+                <div>🏆 Level</div>
+                <div class="stat-value" id="level">1</div>
+            </div>
+            <div class="stat-box">
+                <div>🎯 Points</div>
+                <div class="stat-value" id="points">0</div>
+            </div>
+            <div class="stat-box">
+                <div>🔥 Total Streaks</div>
+                <div class="stat-value" id="total-streaks">0</div>
+            </div>
+        </section>
+
+        <h2>📊 Level Progress</h2>
+        <div class="level-progress">
+            <div class="progress-bar" id="level-progress-bar"></div>
+            <div class="progress-text" id="level-progress-text">0 / 100</div>
+        </div>
+
+        <h2>➕ Add a New Habit</h2>
+        <section class="habit-form">
+            <input type="text" id="habit-input" placeholder="Enter habit name..." required>
+            <button id="add-habit"><i class="fas fa-plus"></i> Add Habit</button>
+        </section>
+
+        <h2>📅 Your Habits</h2>
+        <section class="habit-list" id="habit-list">
+            <p>No habits added yet. Start tracking now! 🚀</p>
+        </section>
+    </main>
+
+    <div class="level-up-notification" id="level-up-notification">
+        🎉 Congratulations! You've reached Level <span id="new-level">2</span>! 🎉
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
