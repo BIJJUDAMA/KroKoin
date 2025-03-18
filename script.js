@@ -192,7 +192,7 @@ function updateTaskList() {
 
    
     const spacingDiv = document.createElement('div');
-    spacingDiv.style.height = "25px";  
+    spacingDiv.style.height = "55px";  
 
     state.habits.forEach((habit, index) => {
         const taskItem = document.createElement('p');
