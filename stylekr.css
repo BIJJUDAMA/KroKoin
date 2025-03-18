@@ -108,10 +108,21 @@ header {
 
 /* Habit List */
 .habit-list {
-  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap; /* Allow habits to wrap on smaller screens */
+  justify-content: center; /* Center habits horizontally */
+  gap: 15px; /* Space between habits */
   padding: 10px;
-  border-radius: 5px;
-  background: #fff3e0;
+}
+
+/* Individual Habit Item */
+.habit-item {
+  min-width: 150px; /* Set a minimum width */
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 /* Level Up Notification */
