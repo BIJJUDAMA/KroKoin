@@ -2,7 +2,8 @@
 
 /* Container */
 .container {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -138,15 +139,15 @@
   position: fixed;
   bottom: 10px;
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
   background: #ff9800;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   display: none;
   animation: fadeInOut 3s linear;
-  text-align: center; 
-  width: auto; 
+  text-align: center;
+  width: auto;
   max-width: 80%;
 }
 
@@ -159,8 +160,8 @@
   border-radius: 5px;
   transition: 0.3s;
   margin-top: 15px;
-  
-  display: block;  /* Makes it a block element */
+
+  display: block; /* Makes it a block element */
   margin-left: auto;
   margin-right: auto;
   text-align: center;

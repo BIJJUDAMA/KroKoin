@@ -20,6 +20,7 @@ body {
   font-family: "Press Start 2P", system-ui;
   font-size: 25px;
   margin: 10px;
+  margin-top: 30px;
 }
 #tasklist {
   display: block;
@@ -70,4 +71,21 @@ body {
 #star {
   font-size: 30px;
   margin-top: 130px;
+}
+#wel {
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  margin: 50px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  top: 10px;
+}
+#welc {
+  margin: 20px;
+  font-size: 40px;
+}
+#n {
+  margin: 20px;
 }
