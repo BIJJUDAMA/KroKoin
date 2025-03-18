@@ -109,15 +109,15 @@ header {
 /* Habit List */
 .habit-list {
   display: flex;
-  flex-wrap: wrap; /* Allow habits to wrap on smaller screens */
-  justify-content: center; /* Center habits horizontally */
-  gap: 15px; /* Space between habits */
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 15px; /
   padding: 10px;
 }
 
 /* Individual Habit Item */
 .habit-item {
-  min-width: 150px; /* Set a minimum width */
+  min-width: 150px; 
   background: white;
   padding: 10px;
   border-radius: 8px;
@@ -125,7 +125,7 @@ header {
   text-align: center;
 }
 
-/* Level Up Notification */
+
 .level-up-notification {
   position: fixed;
   bottom: 10px;
