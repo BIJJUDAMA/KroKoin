@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Just+Another+Hand&family=Orbitron:wght@400..900&family=Playwrite+CO+Guides&family=Press+Start+2P&display=swap");
+body {
+  background-color: rgb(22, 49, 98);
+}
+* {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+}
+header {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  padding: 15px 0;
+  color: white;
+}
+
+#tit {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#coincounter {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Container */
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stats */
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.stat-box {
+  background: #ff9800;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  width: 30%;
+  font-size: 14px;
+}
+
+/* Level Progress Bar */
+.level-progress {
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 20px;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Habit Form */
+.habit-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.habit-form input {
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #ff9800;
+  border-radius: 5px;
+}
+
+.habit-form button {
+  background: #ff5722;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.habit-form button:hover {
+  background: #e64a19;
+}
+
+/* Habit List */
+.habit-list {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #fff3e0;
+}
+
+/* Level Up Notification */
+.level-up-notification {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #ff9800;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  animation: fadeInOut 3s linear;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
