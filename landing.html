@@ -7,7 +7,7 @@
     <title>KroKoin</title>
     <link rel="stylesheet" href="stylek.css">
     <link rel="stylesheet" href="stylekro.css">
-    <link rel="icon" href="coin.gif" type="image/icon type">
+
 </head>
 
 <body>
@@ -15,15 +15,55 @@
         KroKoin
         <span id="coincounter">
             <a href="login.html" style="color: white;"><p id="numcoin">Login</p></a>
+            <img id="coingif" src="coin.gif" length="50px" height="50px">
+            <p id="numcoin">0000</p>
         </span>
     </div>
     <br>
     <hr style=" border:1.5px solid white; border-radius:20px">
-    <div id="wel">
-        <p id="welc">Welcome to KroKoin</p>
-        <img id="coingif" src="coin.gif" length="50px" height="50px">
-        <br>
-        <p id="n">Gain coins for changing yourself with habits you have always wanted to do.</p>
-        <p id="n">Build a streak to get bonus coins and redeem rewards in our shop.</p>
+    <div id="tasklist">
+        <p style="margin:0px; float: left;">Add new Task</p>
+        <p style="margin:0px; float: right;margin-right:5px;">+</p>
     </div>
+    <div id="curr">
+        <main class="container">
+            <h1>🚀 Habit Streak Tracker</h1>
+
+            <section class="stats-container">
+                <div class="stat-box">
+                    <div>🏆 Level</div>
+                    <div class="stat-value" id="level">1</div>
+                </div>
+                <div class="stat-box">
+                    <div>🎯 Points</div>
+                    <div class="stat-value" id="points">0</div>
+                </div>
+                <div class="stat-box">
+                    <div>🔥 Total Streaks</div>
+                    <div class="stat-value" id="total-streaks">0</div>
+                </div>
+            </section>
+
+            <h2>📊 Level Progress</h2>
+            <div class="level-progress">
+                <div class="progress-bar" id="level-progress-bar"></div>
+                <div class="progress-text" id="level-progress-text">0 / 100</div>
+            </div>
+
+            <h2>➕ Add a New Habit</h2>
+            <section class="habit-form">
+                <input type="text" id="habit-input" placeholder="Enter habit name..." required>
+                <button id="add-habit"><i class="fas fa-plus"></i> Add Habit</button>
+            </section>
+
+            <h2>📅 Your Habits</h2>
+            <section class="habit-list" id="habit-list">
+                <p>No habits added yet. Start tracking now! 🚀</p>
+            </section>
+        </main>
+        <button id="reset-button" onclick="resetState()">Reset Progress</button>
+    </div>
+    <script src="script.js"></script>
 </body>
+
+</html>
