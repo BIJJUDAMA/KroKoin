@@ -13,9 +13,37 @@ body {
 
 .home {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 40px;
 
+}
+.home-button {
+    background-color: rgb(33, 72, 145); /* Green */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+    background-color: black;
+    transform: scale(1.05);
+}
+
+.home-button:active {
+    background-color: #3e8e41;
+    transform: scale(0.98);
+}
+
+
+#homeimg{
+    background-color: transparent;
 }
 
 .login-container {
