@@ -6,7 +6,7 @@ let state = {
     totalStreaks: 0
 };
 
-// Load data from localStorage if available
+
 function loadState() {
     const savedState = localStorage.getItem('habitTrackerState');
     if (savedState) {
@@ -15,27 +15,27 @@ function loadState() {
     }
 }
 
-// Save state to localStorage
+
 function saveState() {
     localStorage.setItem('habitTrackerState', JSON.stringify(state));
 }
 
-// Update UI elements based on current state
+
 function updateUI() {
     document.getElementById('level').textContent = state.level;
     document.getElementById('points').textContent = state.points;
     document.getElementById('total-streaks').textContent = state.totalStreaks;
     
-    // Update progress bar
+    
     const progressPercentage = (state.points / state.pointsToNextLevel) * 100;
     document.getElementById('level-progress-bar').style.width = `${progressPercentage}%`;
     document.getElementById('level-progress-text').textContent = `${state.points}/${state.pointsToNextLevel}`;
     
-    // Render habit list
+   
     renderHabits();
 }
 
-// Render all habits
+
 function renderHabits() {
     const habitList = document.getElementById('habit-list');
     habitList.innerHTML = '';
@@ -59,7 +59,7 @@ function renderHabits() {
         
         const completeButton = document.createElement('button');
         
-        // Check if already completed today
+       
         const today = new Date().toLocaleDateString();
         const completedToday = habit.completionDates.includes(today);
         
@@ -71,11 +71,10 @@ function renderHabits() {
             completeButton.addEventListener('click', () => completeHabit(index));
         }
         
-        // Create streak calendar
+       
         const streakCalendar = document.createElement('div');
         streakCalendar.className = 'streak-calendar';
         
-        // Get last 10 days
         const last10Days = [];
         for (let i = 9; i >= 0; i--) {
             const date = new Date();
@@ -88,7 +87,6 @@ function renderHabits() {
             dayMarker.className = `day-marker ${habit.completionDates.includes(date) ? 'completed' : ''}`;
             dayMarker.title = date;
             
-            // Add day number
             const dayNumber = new Date(date).getDate();
             dayMarker.textContent = dayNumber;
             
@@ -104,7 +102,6 @@ function renderHabits() {
     });
 }
 
-// Add new habit
 function addHabit() {
     const habitInput = document.getElementById('habit-input');
     const habitName = habitInput.value.trim();
@@ -122,28 +119,26 @@ function addHabit() {
     }
 }
 
-// Complete a habit for today
 function completeHabit(index) {
     const habit = state.habits[index];
     const today = new Date().toLocaleDateString();
-    
-    // Only allow completing once per day
+
     if (!habit.completionDates.includes(today)) {
         habit.completionDates.push(today);
         habit.streak++;
-        state.points += 10;  // Base points
+        state.points += 10; 
         
-        // Bonus points for longer streaks
+        
         if (habit.streak >= 7) {
-            state.points += 5;  // Weekly bonus
+            state.points += 5;  
         }
         if (habit.streak >= 30) {
-            state.points += 10;  // Monthly bonus
+            state.points += 10; 
         }
         
         state.totalStreaks++;
         
-        // Check for level up
+      
         if (state.points >= state.pointsToNextLevel) {
             levelUp();
         }
@@ -153,24 +148,23 @@ function completeHabit(index) {
     }
 }
 
-// Level up
+
 function levelUp() {
     state.level++;
     state.points -= state.pointsToNextLevel;
     state.pointsToNextLevel = Math.floor(state.pointsToNextLevel * 1.5);  // Increase points needed for next level
     
-    // Show level up notification
+   
     const notification = document.getElementById('level-up-notification');
     document.getElementById('new-level').textContent = state.level;
     notification.style.display = 'block';
     
-    // Hide notification after animation
     setTimeout(() => {
         notification.style.display = 'none';
     }, 3500);
 }
 
-// Event listeners
+
 document.getElementById('add-habit').addEventListener('click', addHabit);
 document.getElementById('habit-input').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
