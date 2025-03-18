@@ -9,53 +9,57 @@
 </head>
 
 <body>
-    <div id="tit">
-        KroKoin
-        <span id="coincounter">
-            <img id="coingif" src="coinr.gif" length="60px" height="60px">
-            <p id="numcoin">0000</p>
-        </span>
-    </div>
+    <header>
+        <div id="tit">
+            <h1>KroKoin</h1>
+            <span id="coincounter">
+                <img id="coingif" src="coinr.gif" alt="Coin" width="50px" height="50px">
+                <p id="numcoin">0000</p>
+            </span>
+        </div>
+    </header>
 
-    <div class="container">
-        <h1>Habit Streak Tracker</h1>
+    <main class="container">
+        <h1>🚀 Habit Streak Tracker</h1>
         
-        <div class="stats-container">
+        <section class="stats-container">
             <div class="stat-box">
-                <div>Level</div>
+                <div>🏆 Level</div>
                 <div class="stat-value" id="level">1</div>
             </div>
             <div class="stat-box">
-                <div>Points</div>
+                <div>🎯 Points</div>
                 <div class="stat-value" id="points">0</div>
             </div>
             <div class="stat-box">
-                <div>Total Streaks</div>
+                <div>🔥 Total Streaks</div>
                 <div class="stat-value" id="total-streaks">0</div>
             </div>
-        </div>
+        </section>
 
-        <h2>Level Progress</h2>
+        <h2>📊 Level Progress</h2>
         <div class="level-progress">
             <div class="progress-bar" id="level-progress-bar"></div>
-            <div class="progress-text" id="level-progress-text">0/100</div>
+            <div class="progress-text" id="level-progress-text">0 / 100</div>
         </div>
 
-        <h2>Add New Habit</h2>
-        <div class="habit-form">
-            <input type="text" id="habit-input" placeholder="Enter habit name...">
-            <button id="add-habit">Add Habit</button>
-        </div>
+        <h2>➕ Add a New Habit</h2>
+        <section class="habit-form">
+            <input type="text" id="habit-input" placeholder="Enter habit name..." required>
+            <button id="add-habit"><i class="fas fa-plus"></i> Add Habit</button>
+        </section>
 
-        <h2>Your Habits</h2>
-        <div class="habit-list" id="habit-list">
-            <!-- Habits will be added here dynamically -->
-        </div>
-    </div>
+        <h2>📅 Your Habits</h2>
+        <section class="habit-list" id="habit-list">
+            <p>No habits added yet. Start tracking now! 🚀</p>
+        </section>
+    </main>
 
     <div class="level-up-notification" id="level-up-notification">
         🎉 Congratulations! You've reached Level <span id="new-level">2</span>! 🎉
     </div>
-</body>
 
+    <!-- External JavaScript -->
+    <script src="script.js" defer></script>
+</body>
 </html>
