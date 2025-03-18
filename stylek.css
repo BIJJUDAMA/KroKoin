@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Just+Another+Hand&family=Orbitron:wght@400..900&family=Playwrite+CO+Guides&family=Press+Start+2P&display=swap");
+body {
+  background-color: rgb(22, 49, 98);
+}
+* {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+}
+#tit {
+  text-align: left;
+  color: white;
+  font-size: 50px;
+  margin: 30px;
+}
+#coincounter {
+  float: right;
+  text-align: center;
+}
+#numcoin {
+  font-family: "Press Start 2P", system-ui;
+  font-size: 25px;
+  margin: 10px;
+}
+#tasklist {
+  text-align: left;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  font-size: 20px;
+  margin: 50px;
+  border: 2px solid white;
+  border-radius: 10px;
+  position: fixed;
+  padding: 10px;
+  width: 300px;
+  height: 70%;
+}
