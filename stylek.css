@@ -22,6 +22,7 @@ body {
   margin: 10px;
 }
 #tasklist {
+  display: block;
   text-align: left;
   background-color: rgb(53, 53, 53);
   color: white;
@@ -33,4 +34,40 @@ body {
   padding: 10px;
   width: 300px;
   height: 70%;
+}
+#curr {
+  display: block;
+  position: relative;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+  margin: 50px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 65%;
+  height: 600px;
+  left: 400px;
+  top: 10px;
+}
+#habname {
+  font-size: 30px;
+  color: white;
+  margin: 10px;
+}
+#circle {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(53, 53, 53);
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+}
+#start {
+  text-align: center;
+}
+#star {
+  font-size: 30px;
+  margin-top: 130px;
 }

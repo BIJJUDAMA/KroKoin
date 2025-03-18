@@ -1,35 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Just+Another+Hand&family=Orbitron:wght@400..900&family=Playwrite+CO+Guides&family=Press+Start+2P&display=swap");
 
-body {
-  background-color: rgb(22, 49, 98);
-  font-family: "Orbitron", sans-serif;
-}
-
-header {
-  background: linear-gradient(135deg, #ff9800, #ff5722);
-  padding: 15px 0;
-  color: white;
-}
-
-#tit {
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-#coincounter {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-}
-
 /* Container */
 .container {
-  max-width: 600px;
-  margin: 30px auto;
-  background: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -45,7 +17,7 @@ header {
 
 .stat-box {
   background: #ff9800;
-  color: white;
+  color: rgb(53, 53, 53);
   padding: 15px;
   border-radius: 8px;
   width: 30%;
@@ -175,8 +147,16 @@ header {
 }
 
 @keyframes fadeInOut {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
