@@ -164,13 +164,13 @@ function levelUp() {
     document.getElementById('new-level').textContent = state.level;
     notification.style.display = 'block';
     
-
+    // Hide notification after animation
     setTimeout(() => {
         notification.style.display = 'none';
     }, 3500);
 }
 
-]
+// Event listeners
 document.getElementById('add-habit').addEventListener('click', addHabit);
 document.getElementById('habit-input').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
@@ -178,5 +178,5 @@ document.getElementById('habit-input').addEventListener('keypress', function(e) 
     }
 });
 
-
+// Initialize app
 loadState();
