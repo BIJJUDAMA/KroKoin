@@ -1,3 +1,2 @@
-# DevX
-**Team Name:**Ctrl+Alt+Delete
-**Tech Stack Used:**
+# DevX 🚀  
+**Team Name:** Ctrl+Alt+Delete  
