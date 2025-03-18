@@ -190,27 +190,29 @@ function updateTaskList() {
     const taskList = document.getElementById('tasklist');
     taskList.innerHTML = '<p style="margin:0px; float: left; font-weight: bold;">Tasks</p>';
 
-   
+    
     const spacingDiv = document.createElement('div');
-    spacingDiv.style.height = "55px";  
+    spacingDiv.style.height = "30px"; 
+    taskList.appendChild(spacingDiv);
 
     state.habits.forEach((habit, index) => {
         const taskItem = document.createElement('p');
         taskItem.textContent = habit.name;
         taskItem.style.margin = "5px 0";
         taskItem.style.padding = "5px";
-        taskItem.style.background = habit.completed ? "#6c757d" : "#ff9800"; // Gray if completed
+        taskItem.style.background = habit.completed ? "#6c757d" : "#ff9800"; 
         taskItem.style.color = "white";
         taskItem.style.borderRadius = "5px";
         taskItem.style.cursor = "pointer";
         taskItem.style.textDecoration = habit.completed ? "line-through" : "none";
 
-       
+        
         taskItem.addEventListener('click', () => completeHabit(index));
 
         taskList.appendChild(taskItem);
     });
 }
+
 
 
 
