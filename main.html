@@ -7,8 +7,61 @@
     <title>Document</title>
 </head>
 
-<body>
+<h1>Daily Habit Tracker</h1>
+    <div class="container">
+        <input type="text" id="taskName" placeholder="Enter Task Name">
+        <select id="difficulty">
+            <option value="10">Easy (+10 points)</option>
+            <option value="20">Medium (+20 points)</option>
+            <option value="30">Hard (+30 points)</option>
+        </select>
+        <input type="number" id="timeLimit" placeholder="Time Limit (minutes)">
+        <button onclick="addTask()">Add Task</button>
+
+        <h3>Tasks</h3>
+        <div id="taskList"></div>
+        
+        <h3>Total Points: <span id="points">0</span></h3>
+    </div>
+
+    <script>
+        let totalPoints = 0;
+
+        function addTask() {
+            let taskName = document.getElementById("taskName").value;
+            let difficulty = parseInt(document.getElementById("difficulty").value);
+            let timeLimit = parseInt(document.getElementById("timeLimit").value);
+
+            if (!taskName || !timeLimit) {
+                alert("Please enter task name and time limit.");
+                return;
+            }
+
+            let taskDiv = document.createElement("div");
+            taskDiv.className = "task";
+            taskDiv.innerHTML = `
+                <span>${taskName} - ${timeLimit} min</span>
+                <button onclick="startTask(this, ${difficulty}, ${timeLimit})">Start</button>
+            `;
+            document.getElementById("taskList").appendChild(taskDiv);
+        }
+
+        function startTask(button, points, timeLimit) {
+            button.disabled = true;
+            button.innerText = "In Progress...";
+            setTimeout(() => {
+                let completed = confirm("Did you complete the task?");
+                if (completed) {
+                    totalPoints += points;
+                    document.getElementById("points").innerText = totalPoints;
+                    button.parentElement.remove();
+                } else {
+                    button.disabled = false;
+                    button.innerText = "Start";
+                }
+            }, timeLimit * 60 * 1000);
+        }
+    </script>
 
 </body>
-
 </html>
