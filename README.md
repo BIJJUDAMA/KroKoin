@@ -1,4 +1,4 @@
-# 🚀 DevX - Habit Tracker  
+# 🚀 KroKoin- Habit Tracker  
 
 ### **Team Name:** Ctrl+Alt+Delete  
 
