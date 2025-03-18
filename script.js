@@ -6,7 +6,7 @@ let state = {
     totalStreaks: 0
 };
 
-// Load data from localStorage if available
+
 function loadState() {
     const savedState = localStorage.getItem('habitTrackerState');
     if (savedState) {
@@ -15,31 +15,31 @@ function loadState() {
     }
 }
 
-// Save state to localStorage
+
 function saveState() {
     localStorage.setItem('habitTrackerState', JSON.stringify(state));
 }
 
-// Update UI elements based on current state
+
 function updateUI() {
     document.getElementById('level').textContent = state.level;
     document.getElementById('points').textContent = state.points;
     document.getElementById('total-streaks').textContent = state.totalStreaks;
 
-    // Update progress bar
+   
     const progressPercentage = (state.points / state.pointsToNextLevel) * 100;
     document.getElementById('level-progress-bar').style.width = `${progressPercentage}%`;
     document.getElementById('level-progress-text').textContent = `${state.points}/${state.pointsToNextLevel}`;
 
-    // Update coin counter
+    
     document.getElementById('numcoin').textContent = state.points;
 
-    // Render habits in main list and tasklist
+ 
     renderHabits();
-    updateTaskList();  // Update right-hand menu
+    updateTaskList();  
 }
 
-// Render habits in the main habit list
+
 function renderHabits() {
     const habitList = document.getElementById('habit-list');
     habitList.innerHTML = '';
@@ -104,7 +104,7 @@ function renderHabits() {
     });
 }
 
-// Add new habit and update right-side menu
+
 function addHabit() {
     const habitInput = document.getElementById('habit-input');
     const habitName = habitInput.value.trim();
@@ -114,7 +114,7 @@ function addHabit() {
             name: habitName,
             streak: 0,
             completionDates: [],
-            completed: false  // Track completion status
+            completed: false  
         });
 
         habitInput.value = '';
@@ -123,7 +123,7 @@ function addHabit() {
     }
 }
 
-// Mark a habit as completed
+
 function completeHabit(index) {
     const habit = state.habits[index];
     const today = new Date().toLocaleDateString();
@@ -131,9 +131,9 @@ function completeHabit(index) {
     if (!habit.completionDates.includes(today)) {
         habit.completionDates.push(today);
         habit.streak++;
-        state.points += 10;  // Base points
+        state.points += 10;  
 
-        // Bonus points for streaks
+        
         if (habit.streak >= 7) {
             state.points += 5;
         }
@@ -143,10 +143,10 @@ function completeHabit(index) {
 
         state.totalStreaks++;
 
-        // Mark task as completed in tasklist
+    
         habit.completed = true;
 
-        // Check for level up
+     
         if (state.points >= state.pointsToNextLevel) {
             levelUp();
         }
@@ -156,24 +156,24 @@ function completeHabit(index) {
     }
 }
 
-// Level up system
+
 function levelUp() {
     state.level++;
     state.points -= state.pointsToNextLevel;
     state.pointsToNextLevel = Math.floor(state.pointsToNextLevel * 1.5);
 
-    // Show level up notification
+    
     const notification = document.getElementById('level-up-notification');
     document.getElementById('new-level').textContent = state.level;
     notification.style.display = 'block';
 
-    // Hide notification after animation
+  
     setTimeout(() => {
         notification.style.display = 'none';
     }, 3500);
 }
 
-// Reset progress
+
 function resetState() {
     state = {
         level: 1,
@@ -190,10 +190,9 @@ function updateTaskList() {
     const taskList = document.getElementById('tasklist');
     taskList.innerHTML = '<p style="margin:0px; float: left; font-weight: bold;">Tasks</p>';
 
-    // Add spacing after the "Tasks" heading to push down first task
+   
     const spacingDiv = document.createElement('div');
-    spacingDiv.style.height = "25px";  // Adds space below "Tasks"
-    taskList.appendChild(spacingDiv);
+    spacingDiv.style.height = "25px";  
 
     state.habits.forEach((habit, index) => {
         const taskItem = document.createElement('p');
@@ -206,7 +205,7 @@ function updateTaskList() {
         taskItem.style.cursor = "pointer";
         taskItem.style.textDecoration = habit.completed ? "line-through" : "none";
 
-        // Allow clicking task to mark as completed
+       
         taskItem.addEventListener('click', () => completeHabit(index));
 
         taskList.appendChild(taskItem);
@@ -215,7 +214,7 @@ function updateTaskList() {
 
 
 
-// Event listeners
+
 document.getElementById('add-habit').addEventListener('click', addHabit);
 document.getElementById('habit-input').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
@@ -223,5 +222,5 @@ document.getElementById('habit-input').addEventListener('keypress', function (e)
     }
 });
 
-// Initialize app
+
 loadState();

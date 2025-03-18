@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Just+Another+Hand&family=Orbitron:wght@400..900&family=Playwrite+CO+Guides&family=Press+Start+2P&display=swap");
 
-/* Container */
+
 .container {
   padding-left: 20px;
   padding-right: 20px;
@@ -8,7 +8,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Stats */
+
 .stats-container {
   display: flex;
   justify-content: space-between;
@@ -25,7 +25,7 @@
   font-size: 14px;
 }
 
-/* Level Progress Bar */
+
 .level-progress {
   background: #ddd;
   border-radius: 10px;
@@ -49,7 +49,7 @@
   font-size: 14px;
 }
 
-/* Habit Form */
+
 .habit-form {
   display: flex;
   justify-content: center;
@@ -78,7 +78,7 @@
   background: #e64a19;
 }
 
-/* Habit List */
+
 .habit-list {
   display: flex;
   flex-wrap: wrap;
@@ -91,8 +91,8 @@
 
 .habit-item {
   min-width: 250px;
-  background: white; /* Ensure background is white */
-  color: black; /* Make text clearly visible */
+  background: white; 
+  color: black; 
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -105,7 +105,7 @@
 
 
 
-/* Habit Name & Streak - Align in Row */
+
 .habit-info {
   display: flex;
   justify-content: space-between;
@@ -115,7 +115,7 @@
   padding: 5px;
 }
 
-/* Streak Calendar - Dates in a Row */
+
 .streak-calendar {
   display: flex;
   flex-direction: row;
@@ -125,7 +125,7 @@
   padding: 5px;
 }
 
-/* Individual Date Box */
+
 .day-marker {
   width: 25px;
   height: 25px;
@@ -139,7 +139,7 @@
   font-weight: bold;
 }
 
-/* Level Up Notification */
+
 .level-up-notification {
   position: fixed;
   bottom: 10px;
@@ -166,7 +166,7 @@
   transition: 0.3s;
   margin-top: 15px;
 
-  display: block; /* Makes it a block element */
+  display: block; 
   margin-left: auto;
   margin-right: auto;
   text-align: center;
