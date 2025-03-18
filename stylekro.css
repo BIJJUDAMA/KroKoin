@@ -137,13 +137,37 @@
 .level-up-notification {
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  left: 50%;
+  transform: translateX(-50%); 
   background: #ff9800;
   color: white;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   display: none;
   animation: fadeInOut 3s linear;
+  text-align: center; 
+  width: auto; 
+  max-width: 80%;
+}
+
+#reset-button {
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 15px;
+  
+  display: block;  /* Makes it a block element */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#reset-button:hover {
+  background: darkred;
 }
 
 @keyframes fadeInOut {

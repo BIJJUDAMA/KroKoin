@@ -164,6 +164,18 @@ function levelUp() {
     }, 3500);
 }
 
+function resetState() {
+    state = {
+        level: 1,
+        points: 0,
+        pointsToNextLevel: 100,
+        habits: [],
+        totalStreaks: 0
+    };
+    saveState(); 
+    updateUI();  
+}
+
 
 document.getElementById('add-habit').addEventListener('click', addHabit);
 document.getElementById('habit-input').addEventListener('keypress', function(e) {

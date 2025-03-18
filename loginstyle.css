@@ -11,9 +11,11 @@ body {
     align-items: center;
 }
 
-#home {
-    display: flex;
-    align-items:flex-start;
+.home {
+    position: absolute;
+    top: 0;
+    left: 0;
+
 }
 
 .login-container {
