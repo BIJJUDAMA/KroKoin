@@ -3,7 +3,7 @@
 ### **Team Name:** Ctrl+Alt+Delete  
 
 ## 🌟 About the Project  
-DevX is a **habit tracking web app** that helps users maintain **streaks, earn reward points, and track assigned habits**. It includes a **login page** for personalized habit management.  
+KroKoin is a **habit tracking web app** that helps users maintain **streaks, earn reward points, and track assigned habits**. It includes a **login page** for personalized habit management.  
 
 ## 🛠️ Tech Stack  
 - **HTML** 🏗️ - Structure  
